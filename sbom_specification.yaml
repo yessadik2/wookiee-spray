@@ -14,7 +14,7 @@ steps:
     name: "Run Maven cycloneDX plugin command"
     command: |
       # For more details, visit https://github.com/CycloneDX/cyclonedx-maven-plugin/blob/master/README.md
-      mvn -X org.cyclonedx:cyclonedx-maven-plugin:2.7.8:makeAggregateBom -DincludeRuntimeScope=true -DincludeCompileScope=true -DincludeProvidedScope=false -DincludeSystemScope=false -DincludeTestScope=false -DoutputFormat=json -DoutputName=artifactSBOM -DschemaVersion=1.4
+      mvn -X org.cyclonedx:cyclonedx-maven-plugin:2.7.7:makeAggregateBom -DincludeRuntimeScope=true -DincludeCompileScope=true -DincludeProvidedScope=false -DincludeSystemScope=false -DincludeTestScope=false -DoutputFormat=json -DoutputName=artifactSBOM -DschemaVersion=1.4
       mv target/artifactSBOM.json ./artifactSBOM.json
 outputArtifacts:
   - name: artifactSBOM
